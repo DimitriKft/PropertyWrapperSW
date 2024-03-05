@@ -20,11 +20,19 @@ struct EnvironemntView: View {
              Text("@Environment fournit un moyen de gérer et de transmettre des données pertinentes pour l'ensemble de l'application ou pour des parties spécifiques de l'application, telles que les thèmes, les paramètres de localisation, l'orientation de la mise en page ou d'autres valeurs de configuration. ")
                  .padding()
                  .fontWeight(.bold)
-             Text("Dark mode activé !")
-                 .background(colorScheme == .dark ? Color.black : Color.white)
-             .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-             .font(.title)
-             .fontWeight(.semibold)
+             if colorScheme == .dark{
+                 Text("Dark mode activé !")
+                     .background(colorScheme == .dark ? Color.black : Color.white)
+                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                 .font(.title)
+                 .fontWeight(.semibold)
+             }else{
+                 Text("Ligth mode activé !")
+                     .background(colorScheme == .dark ? Color.black : Color.white)
+                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                 .font(.title)
+                 .fontWeight(.semibold)
+             }
          }
      }
 }
